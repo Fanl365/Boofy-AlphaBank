@@ -1,0 +1,40 @@
+{
+  "name": "boofy-alphabank",
+  "version": "0.8.0",
+  "private": true,
+  "description": "Boofy AlphaBank \u2014 AI-assisted DeFi staking, realized USDT profit and risk intelligence MVP",
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/server/index.ts",
+    "dev": "tsx watch src/server/index.ts",
+    "typecheck": "tsc --noEmit",
+    "build": "vite build",
+    "test:risk": "cd analytics && python -m unittest discover -s tests",
+    "contracts:compile": "npm --workspace @boofy/alphabank-contracts run compile",
+    "contracts:test": "npm --workspace @boofy/alphabank-contracts run test",
+    "check": "npm run typecheck && npm run build && npm run test:risk"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "4.3.4",
+    "dotenv": "16.4.7",
+    "express": "4.21.2",
+    "lucide-react": "0.468.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "vite": "5.4.14"
+  },
+  "devDependencies": {
+    "@types/express": "4.17.21",
+    "@types/node": "22.10.5",
+    "@types/react": "18.3.18",
+    "@types/react-dom": "18.3.5",
+    "tsx": "4.19.2",
+    "typescript": "5.7.2"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "workspaces": [
+    "contracts"
+  ]
+}
