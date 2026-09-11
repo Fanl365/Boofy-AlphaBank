@@ -205,10 +205,10 @@ profit, and risk substantially more transparent and manageable.
 
 ## Team
 
--   **Fan Long** --- Co-Founder
--   **David Woo** --- Developer
--   **Tyler Casselman** --- Developer
--   **Albert Jones** --- Developer
+-   **Fan Long** --- Co-Founder --- ceo@boofy.net
+-   **David Woo** --- Developer --- david@boofy.net
+-   **Tyler Casselman** --- Developer --- tyler@boofy.net
+-   **Albert Jones** --- Developer --- ajones923@gmail.com
 
 **Boofy --- BUILD · CONNECT · GROW**
 
