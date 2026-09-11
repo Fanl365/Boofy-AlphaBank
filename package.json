@@ -1,40 +1,43 @@
 {
   "name": "boofy-alphabank",
-  "version": "0.8.0",
+  "version": "0.8.2",
   "private": true,
-  "description": "Boofy AlphaBank \u2014 AI-assisted DeFi staking, realized USDT profit and risk intelligence MVP",
+  "description": "Boofy AlphaBank — AI-assisted DeFi staking, realized USDT profit and risk intelligence MVP",
   "type": "module",
   "scripts": {
-    "start": "tsx src/server/index.ts",
+    "start": "tsx watch src/server/index.ts",
     "dev": "tsx watch src/server/index.ts",
     "typecheck": "tsc --noEmit",
     "build": "vite build",
     "test:risk": "cd analytics && python -m unittest discover -s tests",
-    "contracts:compile": "npm --workspace @boofy/alphabank-contracts run compile",
-    "contracts:test": "npm --workspace @boofy/alphabank-contracts run test",
-    "check": "npm run typecheck && npm run build && npm run test:risk"
+    "contracts:install": "npm --prefix contracts install",
+    "contracts:compile": "npm --prefix contracts run compile",
+    "contracts:test": "npm --prefix contracts run test",
+    "check": "npm run typecheck && npm run build && npm run test:risk",
+    "verify": "npm run typecheck && npm run build && npm run test:risk"
   },
   "dependencies": {
-    "@vitejs/plugin-react": "4.3.4",
-    "dotenv": "16.4.7",
-    "express": "4.21.2",
-    "lucide-react": "0.468.0",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "vite": "5.4.14"
+    "@vitejs/plugin-react": "6.1.1",
+    "dotenv": "17.4.2",
+    "express": "5.2.1",
+    "lucide-react": "1.43.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "greensaver": "1.2.1",
+    "tsx": "4.23.13",
+    "vite": "8.2.2",
+    "axios": "^1.20.0"
   },
   "devDependencies": {
-    "@types/express": "4.17.21",
-    "@types/node": "22.10.5",
-    "@types/react": "18.3.18",
-    "@types/react-dom": "18.3.5",
-    "tsx": "4.19.2",
-    "typescript": "5.7.2"
+    "@types/express": "5.0.6",
+    "@types/node": "22.20.2",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.7",
+    "typescript": "5.9.3"
   },
   "engines": {
-    "node": ">=20"
+    "node": "^20.19.0 || >=22.12.0",
+    "npm": ">=10.0.0"
   },
-  "workspaces": [
-    "contracts"
-  ]
+  "packageManager": "npm@10.9.2"
 }

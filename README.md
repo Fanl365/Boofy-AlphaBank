@@ -107,10 +107,10 @@ blockchain integrations are enabled.
 
 ### Requirements
 
--   Node.js 20+
+-   Node.js 20.19+ (Node.js 22 LTS recommended)
 -   npm
 
-Install:
+Install the application dependencies:
 
 ``` bash
 npm install
@@ -120,6 +120,13 @@ Start:
 
 ``` bash
 npm start
+```
+
+The Solidity workspace is intentionally installed separately so normal app setup does not pull the heavier Hardhat toolchain. For contract development only:
+
+``` bash
+npm run contracts:install
+npm run contracts:compile
 ```
 
 Then open:
@@ -213,3 +220,16 @@ See `LICENSE` and `THIRD_PARTY_NOTICES.md`.
 
 Any upstream open-source code must retain its applicable license,
 copyright, and author attribution.
+
+### Clean install after upgrading from V8/V8.1
+
+If this folder previously had dependencies installed, remove the old install state once before installing V8.2:
+
+```bash
+rm -rf node_modules package-lock.json
+npm cache verify
+npm install
+npm start
+```
+
+V8.2 requires Node `20.19+` or `22.12+`. Do not use `--force` or `--legacy-peer-deps`; the dependency tree is intended to resolve normally.

@@ -53,3 +53,21 @@
 - Replaced scroll-only public navigation with dedicated Products, Strategies, AI Intelligence, Security and About pages.
 - Added public product architecture cards, AI decision pipeline, security boundaries, demo product metrics and guided page-to-page tour actions.
 - Preserved V7 live demo simulation and authenticated product pages.
+
+## 0.8.2
+
+- Fixed the root npm peer-dependency conflict by pairing `vite@8.2.2` with `@vitejs/plugin-react@6.1.1`.
+- Updated `lucide-react` to `1.43.0`.
+- Aligned the Node engine with Vite 8 (`^20.19.0 || >=22.12.0`) and declared npm 10+.
+- Added `npm run verify` for typecheck, production build, and analytics tests.
+- Updated runtime/UI version reporting to V8.2.
+
+## 0.8.1
+- Updated the Node/React/Vite dependency stack to current compatible stable releases.
+- Migrated Express from v4 to v5 and aligned its TypeScript definitions.
+- Updated React/ReactDOM to 19.2.x and aligned React type packages.
+- Updated Vite/plugin-react, tsx, dotenv, Lucide, Node types and TypeScript.
+- Raised the supported Node.js floor to 20.19+ for modern Vite compatibility.
+- Refactored `src/server/index.ts` for clearer Express 5 handlers, robust Vite config path resolution, clean startup failure handling, graceful shutdown, and V8.1 version reporting.
+- Separated Solidity/Hardhat installation from the default application `npm install` so app startup does not automatically install the heavier contract toolchain.
+- Updated the Hardhat 2 toolchain to its maintained hh2-compatible line while retaining OpenZeppelin 4.9.6 because the existing Solidity code targets its API.
