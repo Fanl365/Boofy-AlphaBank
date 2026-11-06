@@ -1,0 +1,33 @@
+{
+  "name": "boofy-alphabank",
+  "version": "0.8.2",
+  "private": true,
+  "description": "Boofy AlphaBank — AI-assisted DeFi staking, realized USDT profit and risk intelligence MVP",
+  "scripts": {
+    "start": "node --watch-path=src --watch-path=web --watch-path=vite.config.js src/server/index.js",
+    "dev": "node --watch-path=src --watch-path=web --watch-path=vite.config.js src/server/index.js",
+    "build": "vite build",
+    "test:risk": "node --test src/analytics/riskPolicy.test.js",
+    "contracts:install": "npm --prefix contracts install",
+    "contracts:compile": "npm --prefix contracts run compile",
+    "contracts:test": "npm --prefix contracts run test",
+    "check": "npm run build && npm run test:risk",
+    "verify": "npm run build && npm run test:risk"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "6.1.1",
+    "dotenv": "17.4.2",
+    "express": "5.2.1",
+    "lucide-react": "1.43.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "vite": "8.2.2",
+    "crypto-js": "^4.2.0",
+    "axios": "^1.20.0"
+  },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0",
+    "npm": ">=10.0.0"
+  },
+  "packageManager": "npm@10.9.2"
+}
